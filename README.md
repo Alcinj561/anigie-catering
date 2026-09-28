@@ -1,4 +1,4 @@
-# ANIGIE Kitchen & Catering website
+# ANGIE Kitchen & Catering website
 
 One-page marketing site built with Next.js, TypeScript, and Tailwind CSS.
 

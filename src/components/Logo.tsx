@@ -52,7 +52,7 @@ export function Logo({ className = "", tone = "light" }: LogoProps) {
     <span className={`inline-flex min-w-0 items-center gap-2 sm:gap-2.5 ${className}`}>
       <LogoMark className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" />
       <span className="flex flex-col leading-none">
-        <span className={`font-display text-lg font-bold tracking-wide min-[380px]:text-xl ${text}`}>ANIGIE</span>
+        <span className={`font-display text-lg font-bold tracking-wide min-[380px]:text-xl ${text}`}>ANGIE</span>
         <span className={`mt-1 whitespace-nowrap text-[0.6rem] max-[359px]:hidden font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em] ${sub}`}>
           Kitchen &amp; Catering
         </span>

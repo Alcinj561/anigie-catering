@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Logo, LogoMark } from "@/components/Logo";
 import {
   BriefcaseIcon,
+  CalendarIcon,
   CandleIcon,
   HomeIcon,
   MailIcon,
@@ -52,7 +53,7 @@ const scale = [
 const steps = [
   {
     title: "Call or text",
-    body: "Share the date, how many people you are feeding, and what kind of food you have in mind.",
+    body: "Reach out at least 2 weeks before your date. Share how many people you are feeding and what kind of food you have in mind.",
   },
   {
     title: "Plan it together",
@@ -72,6 +73,21 @@ function Eyebrow({ children, tone = "light" }: { children: React.ReactNode; tone
       }`}
     >
       {children}
+    </p>
+  );
+}
+
+function LeadTimeNotice({ tone = "light" }: { tone?: "light" | "dark" }) {
+  return (
+    <p
+      className={`inline-flex items-center gap-2.5 rounded-2xl px-4 py-2 text-sm font-semibold min-[360px]:rounded-full ${
+        tone === "light"
+          ? "border border-tomato-bright/40 bg-tomato/15 text-cream"
+          : "border border-tomato/30 bg-tomato/10 text-charcoal"
+      }`}
+    >
+      <CalendarIcon className={`h-4 w-4 shrink-0 ${tone === "light" ? "text-tomato-bright" : "text-tomato"}`} />
+      {business.leadTime}
     </p>
   );
 }
@@ -105,7 +121,10 @@ export default function Home() {
                 From 1 person to 1000 people, feel free to text or call. Tell me about your
                 gathering and I will cook the food to match it.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="mt-6">
+                <LeadTimeNotice />
+              </div>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href={business.phoneHref}
                   className="inline-flex items-center justify-center gap-2.5 rounded-full bg-tomato px-7 py-4 text-base font-semibold text-white shadow-xl shadow-tomato/25 transition hover:bg-[#ad361b]"
@@ -216,7 +235,7 @@ export default function Home() {
               </div>
               <p className="text-lg leading-relaxed text-cream/80">
                 {business.offer} Cooking for yourself, your family, your office, or a
-                full event crowd starts the same way: one call or text.
+                full event crowd starts the same way: one call or text, at least 2 weeks ahead.
               </p>
             </div>
 
@@ -294,12 +313,12 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <Eyebrow tone="dark">About ANIGIE</Eyebrow>
+              <Eyebrow tone="dark">About ANGIE</Eyebrow>
               <h2 id="about-title" className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl">
                 Cooked to order, never one-size-fits-all
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-charcoal/80">
-                ANIGIE Kitchen &amp; Catering is built around one simple idea: you tell me what
+                ANGIE Kitchen &amp; Catering is built around one simple idea: you tell me what
                 you need, and I cook it. No fixed packages. Every order starts with a
                 conversation about your guests, your occasion, and the food you want on the table.
               </p>
@@ -337,6 +356,9 @@ export default function Home() {
                   Call or text with your date, guest count, and what you would like to eat.
                   Email works too.
                 </p>
+                <div className="mt-6">
+                  <LeadTimeNotice />
+                </div>
               </div>
 
               <ul className="grid gap-4">
@@ -392,7 +414,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 md:flex-row md:items-center md:justify-between">
           <div>
             <Logo />
-            <p className="mt-3 text-sm text-cream/65">Made-to-order catering for 1 to 1,000 guests.</p>
+            <p className="mt-3 text-sm text-cream/65">Made-to-order catering for 1 to 1,000 guests. Orders 2 weeks in advance.</p>
           </div>
           <nav aria-label="Footer">
             <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-cream/80">

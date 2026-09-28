@@ -1,14 +1,15 @@
 // Verified business details. Only facts from the business card belong here.
 export const business = {
-  name: "ANIGIE Kitchen & Catering",
-  shortName: "ANIGIE",
+  name: "ANGIE Kitchen & Catering",
+  shortName: "ANGIE",
   phoneDisplay: "561.305.3809",
   phoneHref: "tel:+15613053809",
   smsHref: "sms:+15613053809",
-  email: "valsainto26@gmail.com",
-  emailHref: "mailto:valsainto26@gmail.com",
+  email: "valsaina26@gmail.com",
+  emailHref: "mailto:valsaina26@gmail.com",
   mainMessage: "You can call me for all the cooking you need & want.",
   offer: "From 1 person to 1000 people feel free to text or call.",
+  leadTime: "Please place orders 2 weeks in advance.",
 };
 
 // Prefix for public files when the site is served from a sub-path.

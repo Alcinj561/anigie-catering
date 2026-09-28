@@ -14,9 +14,9 @@ const heading = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "ANIGIE Kitchen & Catering | Made-to-order catering for 1 to 1,000 guests",
+  title: "ANGIE Kitchen & Catering | Made-to-order catering for 1 to 1,000 guests",
   description:
-    "Made-to-order cooking and catering from ANIGIE Kitchen & Catering. From 1 person to 1000 people, call or text 561.305.3809.",
+    "Made-to-order cooking and catering from ANGIE Kitchen & Catering. From 1 person to 1000 people. Place orders 2 weeks in advance: call or text 561.305.3809.",
 };
 
 export const viewport: Viewport = {
