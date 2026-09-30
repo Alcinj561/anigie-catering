@@ -1,0 +1,4 @@
+{
+  "name": "notify-on-order-inquiry",
+  "entry": "index.ts"
+}

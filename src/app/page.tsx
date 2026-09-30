@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Logo, LogoMark } from "@/components/Logo";
+import { OrderInquiryForm } from "@/components/OrderInquiryForm";
 import {
   BriefcaseIcon,
   CalendarIcon,
@@ -361,6 +362,7 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="grid gap-6">
               <ul className="grid gap-4">
                 <li>
                   <a
@@ -405,6 +407,8 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
+              <OrderInquiryForm />
+              </div>
             </div>
           </div>
         </section>

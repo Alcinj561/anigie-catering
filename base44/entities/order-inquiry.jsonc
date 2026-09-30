@@ -1,0 +1,26 @@
+{
+  "name": "OrderInquiry",
+  "description": "Customer catering requests submitted from the ANGIE Kitchen & Catering website.",
+  "type": "object",
+  "properties": {
+    "customer_name": { "type": "string", "minLength": 2, "maxLength": 120 },
+    "email": { "type": "string", "format": "email", "maxLength": 254 },
+    "phone": { "type": "string", "minLength": 7, "maxLength": 40 },
+    "event_date": { "type": "string", "format": "date" },
+    "guest_count": { "type": "integer", "minimum": 1, "maximum": 1000 },
+    "event_type": { "type": "string", "maxLength": 100 },
+    "food_request": { "type": "string", "minLength": 10, "maxLength": 3000 },
+    "status": {
+      "type": "string",
+      "enum": ["new", "contacted", "booked", "declined"],
+      "default": "new"
+    }
+  },
+  "required": ["customer_name", "email", "phone", "event_date", "guest_count", "food_request"],
+  "rls": {
+    "create": { "user_condition": { "role": "admin" } },
+    "read": { "user_condition": { "role": "admin" } },
+    "update": { "user_condition": { "role": "admin" } },
+    "delete": { "user_condition": { "role": "admin" } }
+  }
+}
