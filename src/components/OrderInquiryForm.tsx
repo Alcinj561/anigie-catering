@@ -33,7 +33,7 @@ export function OrderInquiryForm() {
         company: String(data.get("company") ?? ""),
         form_started_at: startedAt,
       });
-      if (!result?.success) throw new Error("Order request was rejected.");
+      if (!result?.data?.success) throw new Error("Order request was rejected.");
       form.reset();
       setStatus("success");
       setMessage("Thank you. Your request was sent. ANGIE will follow up soon.");
